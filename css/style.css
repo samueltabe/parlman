@@ -4027,7 +4027,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
 
 /* ======= Footer style ======= */
 .footer-section {
-    background: #222222;
+    background: #000;
     padding: 75px 0 45px 0;
     width: 100%;
 }
