@@ -3322,7 +3322,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
 .testimonials .testimonials-box {
     position: relative;
     background: #f6f6f6;
-    padding: 55px 50px 45px 50px;
+    padding: 35px 30px;
     border-radius: 10px;
     z-index: 2;
 }
