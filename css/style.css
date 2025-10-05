@@ -325,8 +325,9 @@ input[type="checkbox"] {
     background-attachment: fixed;
 }
 .bg-img {
-    background-size: cover;
     background-repeat: no-repeat;
+    background-size: cover; /* shows the entire image */
+    
 }
 .bg-img-position-top {
     background-position: top;
@@ -1773,6 +1774,9 @@ input[type="checkbox"] {
 /* ======= Section style ======= */
 .section-padding {
     padding: 120px 0;
+}
+.section-padding-2 {
+    padding: 50px 0;
 }
 .section-padding h1 {
     font-size: 40px;
