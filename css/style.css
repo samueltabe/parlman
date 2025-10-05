@@ -1331,7 +1331,7 @@ input[type="checkbox"] {
     display: -ms-flexbox;
     display: flex;
     overflow: hidden;
-    min-height: calc(100vh - 100px);
+    min-height: calc(95vh - 100px);
     position: relative;
     -webkit-box-align: center;
     -ms-flex-align: center;
