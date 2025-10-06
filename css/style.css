@@ -1059,7 +1059,7 @@ input[type="checkbox"] {
 }
 @media screen and (max-width: 991px) {
     .header .caption h1 {
-        font-size: 40px;
+        font-size: 33px;
     }
 }
 
@@ -1438,7 +1438,7 @@ input[type="checkbox"] {
 }
 @media screen and (max-width: 991px) {
     .kenburns-inner .caption h1 {
-        font-size: 40px;
+        font-size: 33px;
     }
 }
 
@@ -2153,7 +2153,7 @@ input[type="checkbox"] {
     position: relative;
 }
 .services .item {
-    padding: 60px 45px 90px 45px;
+    padding: 20px 20px 100px 20px;
     border-radius: 10px;
     background-color: transparent;
     position: relative;
@@ -2198,6 +2198,28 @@ input[type="checkbox"] {
 .services .item .numb {
     font-family: 'Urbanist', sans-serif;
     font-size: 120px;
+    line-height: 90px;
+    font-weight: 900;
+    position: absolute;
+    bottom: 0px;
+    right: 40px;
+    border: none;
+    background: linear-gradient(180deg, #f1f1f1 0%, #fdfdfd 90%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.services .item:hover .numb {
+    border: none;
+    background: linear-gradient(180deg, #d8d8d8 0%, #f1f1f1 90%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.services .item .numb-last {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 50px;
     line-height: 90px;
     font-weight: 900;
     position: absolute;
@@ -4031,7 +4053,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
 
 /* ======= Footer style ======= */
 .footer-section {
-    background: #000;
+    background: #1b1b1b;
     padding: 75px 0 45px 0;
     width: 100%;
 }
