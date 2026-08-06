@@ -9,7 +9,7 @@ export default function Author() {
           <p className="text-xs font-medium uppercase tracking-[0.28em] text-bronze-deep">
             About the Author
           </p>
-          <h2 className="mt-4 font-display text-[clamp(2.4rem,5vw,4rem)] leading-[1.05]">
+          <h2 className="mt-4 font-display text-[clamp(2.0rem,5vw,3rem)] leading-[1.05]">
             {author.name}
           </h2>
           <p className="mt-5 text-sm leading-relaxed text-slate md:text-base">
