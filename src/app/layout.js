@@ -14,6 +14,7 @@ const sora = Sora({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://dr-perlman-new.pages.dev"),
   title: "Reclaiming Respect | Emanuel C. Perlman",
   description:
     "A Blueprint for Peace in a Divided World. Discover Reclaiming Respect by Emanuel C. Perlman — and the forthcoming memoir Reclaiming the Spirit (October 2026).",
@@ -31,9 +32,29 @@ export const metadata = {
     description:
       "A Blueprint for Peace in a Divided World — and the forthcoming memoir Reclaiming the Spirit, October 2026.",
     type: "website",
+    url: "/",
+    images: [
+      {
+        url: "/images/android-chrome-512x512.png",
+        width: 512,
+        height: 512,
+        alt: "Destination Peace",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: "Reclaiming Respect | Emanuel C. Perlman",
+    description:
+      "A Blueprint for Peace in a Divided World — and the forthcoming memoir Reclaiming the Spirit, October 2026.",
+    images: ["/images/android-chrome-512x512.png"],
   },
   icons: {
-    icon: "/images/favicon.ico",
+    icon: [
+      { url: "/images/favicon.ico" },
+      { url: "/images/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/images/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
     apple: "/images/apple-touch-icon.png",
   },
 };
