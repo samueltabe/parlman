@@ -12,7 +12,7 @@ export default function Testimonials() {
   useEffect(() => {
     const timer = setInterval(() => {
       setIndex((i) => (i + 1) % total);
-    }, 7000);
+    }, 20000);
     return () => clearInterval(timer);
   }, [total]);
 
