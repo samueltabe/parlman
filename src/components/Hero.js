@@ -5,17 +5,12 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative flex min-h-[100svh] items-end overflow-hidden bg-ink text-paper"
+      className="relative flex min-h-[90svh] items-end overflow-hidden bg-ink text-paper"
     >
       <HeroSlider />
 
       <div className="relative z-10 mx-auto w-full max-w-7xl px-5 pb-16 pt-36 md:px-8 md:pb-24">
-        <p
-          className="animate-fade-up mb-5 text-xs font-medium uppercase tracking-[0.28em] text-bronze-light"
-          style={{ animationDelay: "0.1s" }}
-        >
-          Destination Peace International
-        </p>
+        
         <h1
           className="animate-fade-up font-display text-[clamp(3.2rem,9vw,7.5rem)] leading-[0.92] tracking-tight text-paper"
           style={{ animationDelay: "0.2s" }}
