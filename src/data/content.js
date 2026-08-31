@@ -130,7 +130,7 @@ export const reclaimingSpirit = {
   subtitle:
     "A Memoir of Two Near-Death Experiences and the Fifty-Nine Years Between Them",
   release: "October 2026",
-  launchDate: "Sunday, October 4, 2026",
+  launchDate: "Thursday, October 1, 2026",
   launchTime: "2:00 PM Eastern Time",
   launchLabel: "An International Virtual Book Launch Celebration",
   guests: "Featuring Special Surprise Guests from around the world",
@@ -138,7 +138,7 @@ export const reclaimingSpirit = {
   publisher: "Holysonic Press",
   foreword:
     "Foreword by Dr. Everett R. Siegel, retired Johns Hopkins physician in neuropsychiatry and psychoanalysis",
-  cover: "/images/updates/book.jpeg",
+  cover: "/images/updates/book.png",
   medallion: "/images/updates/si.jpeg",
   publisherLogo: "/images/updates/mu.jpeg",
   writeup: `Reclaiming the Spirit (October 2026) is the memoir of a man who has walked the border between life and death, the physical realm and the unseen, memory and revelation. Having twice crossed the threshold separating this world from the next, Emanuel C. Perlman returns not with quick answers, but with a timeless question: What does it mean to be a true witness to one's own existence and to the sacred weight of human suffering?
