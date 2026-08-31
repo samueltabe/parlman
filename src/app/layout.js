@@ -14,7 +14,7 @@ const sora = Sora({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://dr-perlman-new.pages.dev"),
+  metadataBase: new URL("https://www.reclaimingrespect.org"),
   title: "Reclaiming Respect | Emanuel C. Perlman",
   description:
     "A Blueprint for Peace in a Divided World. Discover Reclaiming Respect by Emanuel C. Perlman — and the forthcoming memoir Reclaiming the Spirit (October 2026).",
