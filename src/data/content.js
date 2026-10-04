@@ -141,6 +141,12 @@ export const reclaimingSpirit = {
   cover: "/images/updates/book.png",
   medallion: "/images/updates/si.jpeg",
   publisherLogo: "/images/updates/mu.jpeg",
+  amazonBanner: "/images/newimage.jpeg",
+  formats: [
+    { label: "Hardcover", href: "https://www.amazon.com/dp/B0HCZ61F7Y" },
+    { label: "Paperback", href: "https://www.amazon.com/dp/B0HCZ3PBMC" },
+    { label: "Kindle eBook", href: "https://www.amazon.com/dp/B0HLWWVL4W" },
+  ],
   writeup: `Reclaiming the Spirit (October 2026) is the memoir of a man who has walked the border between life and death, the physical realm and the unseen, memory and revelation. Having twice crossed the threshold separating this world from the next, Emanuel C. Perlman returns not with quick answers, but with a timeless question: What does it mean to be a true witness to one's own existence and to the sacred weight of human suffering?
 
 Perlman's journey unfolds across the ancient topographies of human faith and ritual practices. He has prepared the deceased with his own hands according to traditional Jewish burial rites; stood in quiet contemplation before the funeral pyres of Varanasi alongside the reclusive Aghori; touched ancient stone beneath Jerusalem that seemed to soften beneath his palm. These are not metaphors borrowed for effect; they are sacred grounds actually walked, rendered with the precise attentiveness that transforms lived experience into enduring wisdom.
