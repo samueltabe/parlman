@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import SpiritAnnouncement from "../components/SpiritAnnouncement";
+import SpiritTableOfContents from "../components/SpiritTableOfContents";
 import Author from "../components/Author";
 import BookSection from "../components/BookSection";
 import Testimonials from "../components/Testimonials";
@@ -16,6 +17,7 @@ export default function Home() {
       <main>
         <Hero />
         <SpiritAnnouncement />
+        <SpiritTableOfContents />
         <Author />
         <BookSection />
         <Testimonials />

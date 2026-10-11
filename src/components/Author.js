@@ -3,7 +3,7 @@ import { author } from "../data/content";
 
 export default function Author() {
   return (
-    <section id="author" className="bg-paper text-ink">
+    <section id="author" className="bg-mist text-ink">
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 py-24 md:px-8 md:py-32 lg:grid-cols-2 lg:gap-20">
         <div className="reveal order-2 lg:order-1">
           <p className="text-xs font-medium uppercase tracking-[0.28em] text-bronze-deep">

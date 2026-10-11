@@ -147,6 +147,35 @@ export const reclaimingSpirit = {
     { label: "Paperback", href: "https://www.amazon.com/dp/B0HCZ3PBMC" },
     { label: "Kindle eBook", href: "https://www.amazon.com/dp/B0HLWWVL4W" },
   ],
+  tableOfContentsImage: "/images/spirit-table-of-contents.png",
+  tableOfContentsQuote:
+    "You discover the exact moment you die that you're not dead.",
+  tableOfContents: [
+    { title: "A Consecration", page: "vii" },
+    { title: "Foreword", page: "xi" },
+    {
+      chapter: 1,
+      title: "The Near-Death of a Listening Soul",
+      page: "1",
+    },
+    {
+      chapter: 2,
+      title: "The Early Shaping of a Listening Soul",
+      page: "13",
+    },
+    { chapter: 3, title: "The Threshold of Awakening", page: "21" },
+    { chapter: 4, title: "Jerusalem: The Lineage Threshold", page: "33" },
+    { chapter: 5, title: "India: The Descent Into the Sacred", page: "43" },
+    { chapter: 6, title: "Sacred Ground", page: "73" },
+    { chapter: 7, title: "Hineini", page: "81" },
+    { chapter: 8, title: "When a People Grow Numb", page: "103" },
+    { chapter: 9, title: "The Serendipity of Alignment", page: "113" },
+    { chapter: 10, title: "A Son from Africa", page: "121" },
+    { title: "Epilogue", page: "133" },
+    { title: "About the Author", page: "137" },
+    { title: "Bibliography", page: "139" },
+    { title: "Glossary", page: "141" },
+  ],
   writeup: `Reclaiming the Spirit (October 2026) is the memoir of a man who has walked the border between life and death, the physical realm and the unseen, memory and revelation. Having twice crossed the threshold separating this world from the next, Emanuel C. Perlman returns not with quick answers, but with a timeless question: What does it mean to be a true witness to one's own existence and to the sacred weight of human suffering?
 
 Perlman's journey unfolds across the ancient topographies of human faith and ritual practices. He has prepared the deceased with his own hands according to traditional Jewish burial rites; stood in quiet contemplation before the funeral pyres of Varanasi alongside the reclusive Aghori; touched ancient stone beneath Jerusalem that seemed to soften beneath his palm. These are not metaphors borrowed for effect; they are sacred grounds actually walked, rendered with the precise attentiveness that transforms lived experience into enduring wisdom.
