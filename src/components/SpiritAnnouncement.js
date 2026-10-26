@@ -1,8 +1,18 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import { reclaimingSpirit } from "../data/content";
 
+const INITIAL_PARAGRAPHS = 2;
+
 export default function SpiritAnnouncement() {
   const paragraphs = reclaimingSpirit.writeup.split("\n\n");
+  const hasMoreText = paragraphs.length > INITIAL_PARAGRAPHS;
+  const [expanded, setExpanded] = useState(false);
+  const visibleParagraphs = expanded
+    ? paragraphs
+    : paragraphs.slice(0, INITIAL_PARAGRAPHS);
 
   return (
     <section
@@ -20,11 +30,8 @@ export default function SpiritAnnouncement() {
       />
 
       <div className="relative mx-auto max-w-7xl px-5 py-24 md:px-8 md:py-32">
-        <div className="reveal mb-16 text-center">
-          <p className="text-xs font-medium uppercase tracking-[0.32em] text-bronze">
-            Save the Date
-          </p>
-          <div className="bronze-rule mx-auto mt-5 w-40" />
+        <div className="reveal mb-14 text-center md:mb-16">
+          <div className="bronze-rule mx-auto w-40" />
           <h2 className="mt-6 font-display text-[clamp(2.4rem,6vw,4.5rem)] leading-[1.05] text-paper">
             {reclaimingSpirit.title}
           </h2>
@@ -36,89 +43,70 @@ export default function SpiritAnnouncement() {
           </p>
         </div>
 
-        <div className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
-          <div className="reveal delay-1 relative mx-auto w-full max-w-md">
-            <div className="absolute -inset-4 border border-bronze/25" />
-            <Image
-              src={reclaimingSpirit.cover}
-              alt={`${reclaimingSpirit.title} virtual launch announcement`}
-              width={900}
-              height={1200}
-              className="relative z-10 w-full object-cover shadow-[0_30px_80px_rgba(0,0,0,0.45)]"
-            />
-          </div>
-
-          <div className="reveal delay-2">
-            <div className="border border-bronze/30 bg-ink-soft/80 p-7 md:p-10">
-              <p className="text-xs uppercase tracking-[0.24em] text-bronze">
-                {reclaimingSpirit.launchLabel}
-              </p>
-              <h3 className="mt-4 font-display text-3xl text-paper md:text-4xl">
-                {reclaimingSpirit.launchDate}
-              </h3>
-              <p className="mt-2 text-lg text-bronze-light">
-                {reclaimingSpirit.launchTime}
-              </p>
-              <div className="bronze-rule my-6 w-full" />
-              <p className="text-mist/80">{reclaimingSpirit.guests}</p>
-              <p className="mt-3 text-sm text-slate">{reclaimingSpirit.foreword}</p>
-
-              <div className="mt-8 flex flex-wrap gap-3">
-                <a
-                  href={`mailto:Emanuel@reclaimingrespect.org?subject=Reclaiming%20the%20Spirit%20—%20Launch%20Invitation`}
-                  className="bg-bronze px-6 py-3 text-xs font-medium uppercase tracking-[0.18em] text-ink transition-colors hover:bg-bronze-light"
-                >
-                  Request Invitation
-                </a>
-                <span className="inline-flex items-center border border-bronze/40 px-6 py-3 text-xs uppercase tracking-[0.18em] text-bronze-light">
-                  {reclaimingSpirit.release}
-                </span>
-              </div>
-              <p className="mt-5 text-sm italic text-mist/55">
-                {reclaimingSpirit.invitation}
-              </p>
-            </div>
-
-            <div className="mt-8 flex items-center gap-5">
+        <div className="reveal delay-1 grid items-start gap-10 lg:grid-cols-2 lg:gap-12 xl:gap-14">
+          <div className="mx-auto w-full max-w-[min(100%,20rem)] sm:max-w-[22rem] md:max-w-[24rem] lg:mx-0 lg:max-w-[26rem] xl:max-w-[28rem]">
+            <div className="relative lg:sticky lg:top-28">
+              <div className="absolute -inset-3 border border-bronze/25 md:-inset-4" />
               <Image
-                src={reclaimingSpirit.medallion}
-                alt="Reclaiming the Spirit medallion"
-                width={88}
-                height={88}
-                className="h-20 w-20 rounded-full object-cover"
+                src="/images/newbook.png"
+                alt={`${reclaimingSpirit.title} book cover`}
+                width={720}
+                height={960}
+                className="relative z-10 w-full h-auto shadow-[0_24px_60px_rgba(0,0,0,0.4)]"
+                priority
               />
-              <div>
-                <p className="text-xs uppercase tracking-[0.2em] text-bronze">
-                  Coming October 2026
-                </p>
-                <p className="mt-1 font-display text-xl text-paper">
-                  Volume II of the Reclaiming Series
-                </p>
-              </div>
             </div>
           </div>
-        </div>
 
-        <div className="reveal delay-3 mx-auto mt-20 max-w-4xl">
-          <h3 className="font-display text-2xl text-bronze-light md:text-3xl">
-            About the memoir
-          </h3>
-          <div className="mt-8 space-y-6 text-base leading-relaxed text-mist/80 md:text-lg">
-            {paragraphs.map((p) => (
-              <p key={p.slice(0, 40)}>{p}</p>
-            ))}
-          </div>
-          <div className="mt-10 flex flex-wrap items-center gap-6">
-            <Image
-              src={reclaimingSpirit.publisherLogo}
-              alt={reclaimingSpirit.publisher}
-              width={180}
-              height={80}
-              className="h-14 w-auto object-contain"
-            />
-            <p className="text-xs uppercase tracking-[0.22em] text-mist/50">
-              {reclaimingSpirit.publisher}
-            </p>
+          <div className="flex flex-col">
+            <h3 className="font-display text-2xl text-bronze-light md:text-3xl">
+              About the memoir
+            </h3>
+            <div className="mt-6 flex-1 space-y-5 text-base leading-relaxed text-mist/80 md:mt-8 md:space-y-6 md:text-lg">
+              {visibleParagraphs.map((p) => (
+                <p key={p.slice(0, 48)}>{p}</p>
+              ))}
+            </div>
+
+            {hasMoreText ? (
+              <div className="mt-6 md:mt-8">
+                <button
+                  type="button"
+                  onClick={() => setExpanded((v) => !v)}
+                  className="border border-bronze/50 px-6 py-3 text-xs font-medium uppercase tracking-[0.18em] text-bronze-light transition-colors hover:border-bronze hover:bg-bronze/10 hover:text-paper"
+                  aria-expanded={expanded}
+                >
+                  {expanded ? "Read less" : "Read more"}
+                </button>
+              </div>
+            ) : null}
+
+            <div className="mt-8 flex flex-wrap items-center gap-6 border-t border-bronze/20 pt-8 md:mt-10">
+              <Image
+                src={reclaimingSpirit.publisherLogo}
+                alt={reclaimingSpirit.publisher}
+                width={180}
+                height={80}
+                className="h-14 w-auto object-contain"
+              />
+              <p className="text-xs uppercase tracking-[0.22em] text-mist/50">
+                {reclaimingSpirit.publisher}
+              </p>
+            </div>
+
+            <div className="mt-6 flex flex-wrap gap-3">
+              {reclaimingSpirit.formats.map((format) => (
+                <a
+                  key={format.label}
+                  href={format.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-bronze px-5 py-3 text-xs font-medium uppercase tracking-[0.16em] text-ink transition-colors hover:bg-bronze-light"
+                >
+                  {format.label}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </div>
